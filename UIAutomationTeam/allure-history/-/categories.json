@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Product Bug",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*AssertionFailedError.*"
+  },
+  {
+    "name": "Test Bug",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*NullPointerException.*"
+  },
+  {
+    "name": "Environment Issue",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*TimeoutException.*|.*PlaywrightException.*"
+  },
+  {
+    "name": "Infrastructure",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*Connection refused.*|.*ECONNRESET.*"
+  }
+]

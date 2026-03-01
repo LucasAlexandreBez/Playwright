@@ -1,0 +1,1 @@
+{"uuid":"038dd15d-32fd-4b65-843e-1333c1c92663","name":"Verify if user gives a right click on 'Right Click Me' button then a text should present on screen","children":["be57c1ce-510d-4a30-9167-c547c9dcb15c"],"befores":[],"afters":[],"start":1769711396606,"stop":1769711403621}

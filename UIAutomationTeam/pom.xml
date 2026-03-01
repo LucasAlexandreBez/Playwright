@@ -1,0 +1,189 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.github</groupId>
+	<artifactId>UIAutomationTeam</artifactId>
+	<version>1.0.0</version>
+	<description>Automation testing framework designed to validate multiple web
+		applications within a single project structure, simulating real-world QA
+		scenarios where one company maintains and tests multiple software
+		products under the same quality assurance framework.</description>
+
+	<profiles>
+		<!-- QA -->
+		<profile>
+			<id>qa-grid</id>
+			<properties>
+				<env>qa-grid</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>qa-cloud</id>
+			<properties>
+				<env>qa-cloud</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>qa-local</id>
+			<properties>
+				<env>qa-local</env>
+			</properties>
+		</profile>
+		<!-- PROD -->
+		<profile>
+			<id>prod-grid</id>
+			<properties>
+				<env>prod-grid</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod-cloud</id>
+			<properties>
+				<env>prod-cloud</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod-local</id>
+			<properties>
+				<env>prod-local</env>
+			</properties>
+		</profile>
+	</profiles>
+
+	<properties>
+		<maven.compiler.release>17</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<aspectj.version>1.9.21</aspectj.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>6.0.2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<!-- Allure adapter for JUnit Platform -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit-platform</artifactId>
+			<version>2.21.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- AspectJ for Allure -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectj.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Playwright -->
+		<dependency>
+			<groupId>com.microsoft.playwright</groupId>
+			<artifactId>playwright</artifactId>
+			<version>1.57.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Hikari for DB connection -->
+		<dependency>
+		   <groupId>com.zaxxer</groupId>
+		   <artifactId>HikariCP</artifactId>
+		   <version>7.0.2</version>
+		   <scope>test</scope>
+		</dependency>
+
+		<!-- JUnit Jupiter (API + Engine) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- JUnit Suite API -->
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- JUnit Params API -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.12.1</version>
+				<configuration>
+					<release>${maven.compiler.release}</release>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<forkCount>1</forkCount>
+					<reuseForks>true</reuseForks>
+					<systemPropertyVariables>
+						<env>${env}</env>
+					</systemPropertyVariables>
+					<argLine>
+						-javaagent:"${settings.localRepository}\org\aspectj\aspectjweaver\${aspectj.version}\aspectjweaver-${aspectj.version}.jar"
+					</argLine>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.16.0</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.4.1</version>
+				<executions>
+					<execution>
+						<id>enforce-env</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireProperty>
+									<property>env</property>
+									<message>
+										You must run Maven with a profile
+										(-Pqa-grid, -Pprod-cloud, etc).
+									</message>
+								</requireProperty>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

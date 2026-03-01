@@ -1,0 +1,106 @@
+-------------------------------------------------------------------------------
+Test set: SRM_2026.jan.regresion.elements.ButtonsTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 57.00 s <<< FAILURE! -- in SRM_2026.jan.regresion.elements.ButtonsTest
+SRM_2026.jan.regresion.elements.ButtonsTest.doubleClickOnDoubleClickMeButton -- Time elapsed: 42.20 s <<< ERROR!
+com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#doubleClickMessage")
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.textContent(FrameImpl.java:776)
+	at com.microsoft.playwright.impl.LocatorImpl.textContent(LocatorImpl.java:622)
+	at com.microsoft.playwright.Locator.textContent(Locator.java:5371)
+	at apps.demoQA.pages.elements.ButtonsPage.getDoubleClickMessage(ButtonsPage.java:28)
+	at SRM_2026.jan.regresion.elements.ButtonsTest.lambda$doubleClickOnDoubleClickMeButton$0(ButtonsTest.java:40)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at SRM_2026.jan.regresion.elements.ButtonsTest.doubleClickOnDoubleClickMeButton(ButtonsTest.java:39)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#doubleClickMessage")
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 13 more
+
+SRM_2026.jan.regresion.elements.CheckBoxTest.checkDocumentsAndUncheckOfficeFolderWithSuccess -- Time elapsed: 10.65 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkDocumentsAndUncheckOfficeFolderWithSuccess(CheckBoxTest.java:102)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkDocumentsAndUncheckOfficeFolderWithSuccess$2(CheckBoxTest.java:109)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+
+SRM_2026.jan.regresion.elements.CheckBoxTest.checkHomeFolderSuccessfully -- Time elapsed: 8.747 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkHomeFolderSuccessfully(CheckBoxTest.java:41)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkHomeFolderSuccessfully$0(CheckBoxTest.java:44)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+

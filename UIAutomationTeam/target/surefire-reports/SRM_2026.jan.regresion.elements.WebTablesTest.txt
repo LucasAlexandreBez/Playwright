@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+Test set: SRM_2026.jan.regresion.elements.WebTablesTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 40.85 s <<< FAILURE! -- in SRM_2026.jan.regresion.elements.WebTablesTest
+SRM_2026.jan.regresion.elements.CheckBoxTest.checkDesktopFolderSuccessfully -- Time elapsed: 23.15 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkDesktopFolderSuccessfully(CheckBoxTest.java:67)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkDesktopFolderSuccessfully$1(CheckBoxTest.java:72)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+
+SRM_2026.jan.regresion.elements.CheckBoxTest.checkWordFileDocWithSuccess -- Time elapsed: 13.01 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkWordFileDocWithSuccess(CheckBoxTest.java:134)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkWordFileDocWithSuccess$3(CheckBoxTest.java:138)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+

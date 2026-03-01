@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SRM_2026.jan.regresion.elements.ButtonsTest" time="57.0" tests="7" errors="1" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam\target\test-classes;C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam\target\classes;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-junit-platform\2.21.0\allure-junit-platform-2.21.0.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.0.2\junit-jupiter-api-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-launcher\6.0.2\junit-platform-launcher-6.0.2.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-test-filter\2.21.0\allure-test-filter-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\playwright\1.57.0\playwright-1.57.0.jar;C:\Users\Lucas\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Lucas\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Lucas\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\driver\1.57.0\driver-1.57.0.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\driver-bundle\1.57.0\driver-bundle-1.57.0.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.0.2\junit-jupiter-engine-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-engine\6.0.2\junit-platform-engine-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lucas\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-suite-api\6.0.2\junit-platform-suite-api-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-commons\6.0.2\junit-platform-commons-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.0.2\junit-jupiter-params-6.0.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="D:\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\Lucas\AppData\Local\Temp\surefire14567923785478596769\surefirebooter-20260129152904910_3.jar C:\Users\Lucas\AppData\Local\Temp\surefire14567923785478596769 2026-01-29T15-29-04_711-jvmRun1 surefire-20260129152904910_1tmp surefire_0-20260129152904910_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam\target\test-classes;C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam\target\classes;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-junit-platform\2.21.0\allure-junit-platform-2.21.0.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.0.2\junit-jupiter-api-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-launcher\6.0.2\junit-platform-launcher-6.0.2.jar;C:\Users\Lucas\.m2\repository\io\qameta\allure\allure-test-filter\2.21.0\allure-test-filter-2.21.0.jar;C:\Users\Lucas\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\playwright\1.57.0\playwright-1.57.0.jar;C:\Users\Lucas\.m2\repository\com\google\code\gson\gson\2.13.2\gson-2.13.2.jar;C:\Users\Lucas\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Lucas\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\driver\1.57.0\driver-1.57.0.jar;C:\Users\Lucas\.m2\repository\com\microsoft\playwright\driver-bundle\1.57.0\driver-bundle-1.57.0.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.0.2\junit-jupiter-engine-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-engine\6.0.2\junit-platform-engine-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lucas\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-suite-api\6.0.2\junit-platform-suite-api-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\platform\junit-platform-commons\6.0.2\junit-platform-commons-6.0.2.jar;C:\Users\Lucas\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.0.2\junit-jupiter-params-6.0.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Lucas"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="D:\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lucas\AppData\Local\Temp\surefire14567923785478596769\surefirebooter-20260129152904910_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="Lucas"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Lucas\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lucas\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\Lucas\Desktop\Repositorys\QA-Automation-Projects\Playwright\UIAutomationTeam"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env" value="qa-local"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="D:\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;D:\Maven\apache-maven-3.9.11\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\allure-2.35.1\bin;D:\Java\jdk-17;D:\JMeter\apache-jmeter-5.6.3\bin;D:\Android\Sdk\platform-tools;pk_111961986_HU3V3JNH3RTHJWI86VDBHELVDS2X5Z9K;D:\nodejs\;D:\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\tools\msys64\mingw64\bin;C:\Users\Lucas\AppData\Local\Microsoft\WindowsApps;C:\Gradle\gradle-8.10.2\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\javafx-sdk-21.0.5\lib;D:\Maven\apache-maven-3.9.11\bin;D:\allure-2.35.1\bin;D:\Java\jdk-17;D:\JMeter\apache-jmeter-5.6.3\bin;D:\Android\SDK\Sdk\platform-tools;pk_111961986_HU3V3JNH3RTHJWI86VDBHELVDS2X5Z9K;C:\Users\Lucas\AppData\Roaming\npm;C:\Users\Lucas\AppData\Local\GitHubDesktop\bin;D:\Microsoft VS Code\bin;C:\tools\msys64\mingw64\bin;;C:\tools\msys64;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="doubleClickOnDoubleClickMeButton" classname="SRM_2026.jan.regresion.elements.ButtonsTest" time="42.196">
+    <error message="Error {&#10;  message=&apos;Timeout 30000ms exceeded.&#10;  name=&apos;TimeoutError&#10;  stack=&apos;TimeoutError: Timeout 30000ms exceeded.&#10;    at ProgressController.run (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\progress.js:68:28)&#10;    at FrameDispatcher._runCommand (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:95:31)&#10;    at DispatcherConnection.dispatch (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:329:39)&#10;}&#10;Call log:&#10;-   - waiting for locator(&quot;#doubleClickMessage&quot;)&#10;" type="com.microsoft.playwright.TimeoutError"><![CDATA[com.microsoft.playwright.TimeoutError: 
+Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#doubleClickMessage")
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.textContent(FrameImpl.java:776)
+	at com.microsoft.playwright.impl.LocatorImpl.textContent(LocatorImpl.java:622)
+	at com.microsoft.playwright.Locator.textContent(Locator.java:5371)
+	at apps.demoQA.pages.elements.ButtonsPage.getDoubleClickMessage(ButtonsPage.java:28)
+	at SRM_2026.jan.regresion.elements.ButtonsTest.lambda$doubleClickOnDoubleClickMeButton$0(ButtonsTest.java:40)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at SRM_2026.jan.regresion.elements.ButtonsTest.doubleClickOnDoubleClickMeButton(ButtonsTest.java:39)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\Lucas\AppData\Local\Temp\playwright-java-12125911241768604397\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#doubleClickMessage")
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 13 more
+]]></error>
+  </testcase>
+  <testcase name="dynamicClickOnClickMeButton" classname="SRM_2026.jan.regresion.elements.ButtonsTest" time="6.251"/>
+  <testcase name="rightClickOnRightClickMeButton" classname="SRM_2026.jan.regresion.elements.ButtonsTest" time="7.009"/>
+  <testcase name="checkDocumentsAndUncheckOfficeFolderWithSuccess" classname="SRM_2026.jan.regresion.elements.CheckBoxTest" time="10.651">
+    <failure message="results (1 failure)&#10;	org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.MultipleFailuresError"><![CDATA[org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkDocumentsAndUncheckOfficeFolderWithSuccess(CheckBoxTest.java:102)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkDocumentsAndUncheckOfficeFolderWithSuccess$2(CheckBoxTest.java:109)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+]]></failure>
+  </testcase>
+  <testcase name="checkHomeFolderSuccessfully" classname="SRM_2026.jan.regresion.elements.CheckBoxTest" time="8.747">
+    <failure message="results (1 failure)&#10;	org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.MultipleFailuresError"><![CDATA[org.opentest4j.MultipleFailuresError: 
+results (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:3054)
+	at SRM_2026.jan.regresion.elements.CheckBoxTest.checkHomeFolderSuccessfully(CheckBoxTest.java:41)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
+		at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:69)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:41)
+		at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
+		at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:195)
+		at SRM_2026.jan.regresion.elements.CheckBoxTest.lambda$checkHomeFolderSuccessfully$0(CheckBoxTest.java:44)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+		at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 3 more
+]]></failure>
+  </testcase>
+  <testcase name="verifyAfter5SecondsButtonShouldBeEnabled" classname="SRM_2026.jan.regresion.elements.DynamicPropertiesTest" time="13.05"/>
+  <testcase name="clickOnDonwloadButtonSuccessfully" classname="SRM_2026.jan.regresion.elements.UploadAndDownloadTest" time="10.441"/>
+</testsuite>

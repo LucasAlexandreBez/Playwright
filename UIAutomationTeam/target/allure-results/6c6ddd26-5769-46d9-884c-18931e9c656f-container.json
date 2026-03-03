@@ -1,0 +1,1 @@
+{"uuid":"6c6ddd26-5769-46d9-884c-18931e9c656f","name":"Verify if user click on Bad Request link then system should present a text value on screen","children":["21384a71-49c3-4b0c-a296-d8ed612ac540"],"befores":[],"afters":[],"start":1772574752800,"stop":1772574755983}

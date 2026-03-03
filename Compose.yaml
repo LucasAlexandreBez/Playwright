@@ -1,0 +1,18 @@
+services:
+  mcr-playwright:
+    image: mcr.microsoft.com/playwright:v1.58.2-noble
+    container_name: mcr-playwright
+    command: >
+      /bin/sh -c "npx -y playwright@1.58.2 run-server
+      --port 3000
+      --host 0.0.0.0"
+    ports:
+      - "3000:3000"
+    shm_size: 4gb
+    mem_limit: 4gb
+    cpus: 3
+    restart: unless-stopped
+    volumes:
+      - ./docker-data:/home/pwuser
+      - ./src/test/resources:/resources
+      - ./allure-results:/allure-results

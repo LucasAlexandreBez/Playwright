@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: SRM_2026.jan.regresion.elements.CheckBoxTest
--------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.57 s -- in SRM_2026.jan.regresion.elements.CheckBoxTest

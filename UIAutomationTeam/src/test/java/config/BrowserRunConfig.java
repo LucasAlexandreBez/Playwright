@@ -31,10 +31,8 @@ public class BrowserRunConfig {
         switch (executionType) {
             case "LOCAL":
                 return generateConfigForLocalExecution(playwright);
-            case"GRID":
-                return generateConfigForNonLocalExecution(playwright, PropertiesConfigLoader.getPropertyValue("grid.endpoint"));
             case "CLOUD":
-                return generateConfigForNonLocalExecution(playwright, PropertiesConfigLoader.getPropertyValue("cloud.endpoint"));
+                return generateConfigForCloudExecution(playwright, PropertiesConfigLoader.getPropertyValue("cloud.endpoint"));
             default:
                 throw new IllegalStateException("Unexpected execution type: " + executionType);
         }
@@ -83,23 +81,40 @@ public class BrowserRunConfig {
         }
     }
 
-    /* ===================== REMOTE (GRID / CLOUD) ===================== */
-    private static Browser generateConfigForNonLocalExecution(Playwright playwright, String endpoint) {
+    /* ===================== REMOTE (CLOUD) ===================== */
+    private static Browser generateConfigForCloudExecution(
+            Playwright playwright,
+            String endpoint
+    ) {
         try {
-            BrowserType type;
+
+            BrowserType browserType;
+            BrowserType.ConnectOptions connectOptions = new BrowserType.ConnectOptions();
+
             switch (GlobalTestRunConfig.SELECTED_BROWSER) {
                 case FIREFOX:
-                    type = playwright.firefox();
+                    browserType = playwright.firefox();
                     break;
                 case WEBKIT:
-                    type = playwright.webkit();
+                    browserType = playwright.webkit();
+                    break;
+                case EDGE:
+                    browserType = playwright.chromium();
+                    break;
+                case CHROME:
+                    browserType = playwright.chromium();
                     break;
                 default:
-                    type = playwright.chromium();
+                    browserType = playwright.chromium();
+                    break;
             }
-            return type.connect(endpoint);
+            return browserType.connect(endpoint, connectOptions);
         } catch (Exception e) {
-            throw new IllegalStateException("Failed to connect to remote Playwright endpoint: " + endpoint, e);
+            throw new IllegalStateException(
+                    "Failed to connect to remote Playwright endpoint: " + endpoint,
+                    e
+            );
         }
     }
+    
 }

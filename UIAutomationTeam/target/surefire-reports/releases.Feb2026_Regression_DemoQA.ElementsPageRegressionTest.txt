@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest
 -------------------------------------------------------------------------------
-Tests run: 30, Failures: 4, Errors: 5, Skipped: 0, Time elapsed: 76.72 s <<< FAILURE! -- in releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.createNewRegisterOnWebTableWithSuccess -- Time elapsed: 11.60 s <<< FAILURE!
+Tests run: 30, Failures: 4, Errors: 5, Skipped: 0, Time elapsed: 76.60 s <<< FAILURE! -- in releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.createNewRegisterOnWebTableWithSuccess -- Time elapsed: 11.74 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected new register to be present in the web table ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:159)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
@@ -17,7 +17,7 @@ org.opentest4j.AssertionFailedError: Expected new register to be present in the 
 	at io.qameta.allure.Allure.step(Allure.java:112)
 	at releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.createNewRegisterOnWebTableWithSuccess(ElementsPageRegressionTest.java:266)
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.clickOnSelectFileButtonSuccessfully -- Time elapsed: 3.092 s <<< ERROR!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.clickOnSelectFileButtonSuccessfully -- Time elapsed: 3.070 s <<< ERROR!
 com.microsoft.playwright.PlaywrightException: Cannot get absolute file path
 	at com.microsoft.playwright.impl.Utils.resolvePathsAndDirectoryForInputFiles(Utils.java:148)
 	at com.microsoft.playwright.impl.Utils.addFilePathUploadParams(Utils.java:108)
@@ -37,7 +37,7 @@ Caused by: java.nio.file.NoSuchFileException: C:\Users\Lucas\Desktop\Repositorys
 	at com.microsoft.playwright.impl.Utils.resolvePathsAndDirectoryForInputFiles(Utils.java:144)
 	... 8 more
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.verifyNotBrokenImage -- Time elapsed: 2.821 s <<< FAILURE!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.verifyNotBrokenImage -- Time elapsed: 2.854 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:158)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:139)
@@ -53,12 +53,12 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at io.qameta.allure.Allure.step(Allure.java:112)
 	at releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.verifyNotBrokenImage(ElementsPageRegressionTest.java:76)
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.updateRegisterOnWebTableWithSuccess -- Time elapsed: 2.690 s <<< FAILURE!
-java.lang.AssertionError: Row not found for register: apps.demoQA.models.elements.WebTablesRegister@1445086a
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.updateRegisterOnWebTableWithSuccess -- Time elapsed: 2.677 s <<< FAILURE!
+java.lang.AssertionError: Row not found for register: apps.demoQA.models.elements.WebTablesRegister@512e4f17
 	at apps.demoQA.pages.elements.WebTablesPage.clickEditOnRow(WebTablesPage.java:88)
 	at releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.updateRegisterOnWebTableWithSuccess(ElementsPageRegressionTest.java:299)
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkHomeFolderSuccessfully -- Time elapsed: 32.88 s <<< ERROR!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkHomeFolderSuccessfully -- Time elapsed: 33.00 s <<< ERROR!
 com.microsoft.playwright.TimeoutError: 
 Error {
   message='Timeout 30000ms exceeded.
@@ -98,7 +98,7 @@ Call log:
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
 	... 7 more
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkDesktopFolderSuccessfully -- Time elapsed: 32.89 s <<< ERROR!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkDesktopFolderSuccessfully -- Time elapsed: 32.91 s <<< ERROR!
 com.microsoft.playwright.TimeoutError: 
 Error {
   message='Timeout 30000ms exceeded.
@@ -138,12 +138,12 @@ Call log:
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
 	... 7 more
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.removeRegisterOnWebTableWithSuccess -- Time elapsed: 2.727 s <<< FAILURE!
-java.lang.AssertionError: Row not found for register: apps.demoQA.models.elements.WebTablesRegister@27003304
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.removeRegisterOnWebTableWithSuccess -- Time elapsed: 2.667 s <<< FAILURE!
+java.lang.AssertionError: Row not found for register: apps.demoQA.models.elements.WebTablesRegister@3f1f0817
 	at apps.demoQA.pages.elements.WebTablesPage.clickDeleteOnRow(WebTablesPage.java:99)
 	at releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.removeRegisterOnWebTableWithSuccess(ElementsPageRegressionTest.java:329)
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkDocumentsAndUncheckOfficeFolderWithSuccess -- Time elapsed: 32.64 s <<< ERROR!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkDocumentsAndUncheckOfficeFolderWithSuccess -- Time elapsed: 32.76 s <<< ERROR!
 com.microsoft.playwright.TimeoutError: 
 Error {
   message='Timeout 30000ms exceeded.
@@ -183,7 +183,7 @@ Call log:
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
 	... 7 more
 
-releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkWordFileDocWithSuccess -- Time elapsed: 32.64 s <<< ERROR!
+releases.Feb2026_Regression_DemoQA.ElementsPageRegressionTest.checkWordFileDocWithSuccess -- Time elapsed: 32.70 s <<< ERROR!
 com.microsoft.playwright.TimeoutError: 
 Error {
   message='Timeout 30000ms exceeded.

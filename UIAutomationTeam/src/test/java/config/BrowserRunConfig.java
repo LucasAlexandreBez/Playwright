@@ -4,8 +4,6 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 
-import engine.AllureEnvironmentManager;
-
 import com.microsoft.playwright.Playwright;
 
 /**
@@ -25,8 +23,6 @@ public class BrowserRunConfig {
      * @return configured browser instance
      */
     public static Browser getBrowserConfiguration(Playwright playwright) {
-    	AllureEnvironmentManager.copyCategoriesFile();
-    	AllureEnvironmentManager.writeEnvironmentFile();
     	String executionType = PropertiesConfigLoader.getPropertyValue("execution.type").toUpperCase();
         switch (executionType) {
             case "LOCAL":

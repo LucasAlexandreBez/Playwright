@@ -16,12 +16,6 @@
 	<profiles>
 		<!-- QA -->
 		<profile>
-			<id>qa-grid</id>
-			<properties>
-				<env>qa-grid</env>
-			</properties>
-		</profile>
-		<profile>
 			<id>qa-cloud</id>
 			<properties>
 				<env>qa-cloud</env>
@@ -34,12 +28,6 @@
 			</properties>
 		</profile>
 		<!-- PROD -->
-		<profile>
-			<id>prod-grid</id>
-			<properties>
-				<env>prod-grid</env>
-			</properties>
-		</profile>
 		<profile>
 			<id>prod-cloud</id>
 			<properties>

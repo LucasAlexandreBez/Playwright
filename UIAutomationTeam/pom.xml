@@ -61,7 +61,6 @@
 	</dependencyManagement>
 
 	<dependencies>
-
 		<!-- Allure adapter for JUnit Platform -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>

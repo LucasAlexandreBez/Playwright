@@ -1,7 +1,6 @@
 package releases;
 
 import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.Browser.NewContextOptions;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
@@ -12,12 +11,15 @@ public class CodeGen {
 
 	public static void main(String[] args) {
 		try (Playwright playwright = Playwright.create()) {
-			BrowserType firefox = playwright.firefox();
-			Browser browser = firefox.launch(new BrowserType.LaunchOptions().setHeadless(false));
-			BrowserContext context = browser.newContext(new NewContextOptions().setViewportSize(1440, 900));
+			Browser browser = playwright.chromium().launch(
+				new BrowserType.LaunchOptions()
+					.setHeadless(false)
+					.setChannel("msedge")
+			);
+			BrowserContext context = browser.newContext();
 			context.route("**/*", Route::resume);
 			Page page = context.newPage();
-			page.navigate("http://localhost:8080/web/index.php/auth/login");
+			page.navigate("http://localhost:9000/web/index.php/auth/login");
 			page.pause();
 		}
 	}

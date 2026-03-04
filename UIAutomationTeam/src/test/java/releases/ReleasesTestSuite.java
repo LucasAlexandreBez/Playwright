@@ -7,7 +7,7 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectPackages({
-	// "Feb2026_PimNewFunctions_OrangeHRM",
+	"Feb2026_PimNewFunctions_OrangeHRM",
 	"Feb2026_Regression_DemoQA"
 })
 @IncludeTags({
@@ -15,6 +15,6 @@ import org.junit.platform.suite.api.Suite;
 	"E2E",
 	"API"
 })
-//@ExcludeTags({"Regression"})
+@ExcludeTags({"Regression"})
 public class ReleasesTestSuite {
 }

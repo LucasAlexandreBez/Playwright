@@ -8,10 +8,15 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({
-
+    E2ETest.class
 })
-@IncludeTags({"E2E", "API"})
-@ExcludeTags({"Smoke"})
+@IncludeTags({
+    "E2E",
+    "API"
+})
+@ExcludeTags({
+	"Regression"
+})
 public class PimNewFunctionsTestSuite {
 
 }

@@ -11,8 +11,8 @@ import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
 
-import engine.helper.AllureAttachmentHelper;
-import engine.helper.SupportedImageTypes;
+import helper.AllureAttachmentHelper;
+import helper.SupportedImageTypes;
 import io.qameta.allure.Allure;
 
 /**

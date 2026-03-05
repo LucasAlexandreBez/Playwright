@@ -9,12 +9,12 @@ public class LoginPage {
 
     @Step("Fill Username input with {username}")
     public void fillUsernameInput(Page page, String username) {
-        page.getByLabel("Username").fill(username);
+        page.getByPlaceholder("Username").fill(username);
     }
     
     @Step("Fill Password input")
     public void fillPasswordInput(Page page, String password) {
-        page.getByLabel("Password").fill(password);
+        page.getByPlaceholder("Password").fill(password);
     }
     
     @Step("Click on Login button")
@@ -26,11 +26,5 @@ public class LoginPage {
     public void clickForgotYourPasswordLink(Page page) {
     	page.getByText("Forgot your password?").click();
     }
-    
-    @Step("Fill the Login form and access OrangeHRM Dashboard")
-    public void fillTheLoginFormAccessOrangeHRM(Page page, String username, String password) {
-        fillUsernameInput(page, username);
-        fillPasswordInput(page, password);
-        clickLoginInput(page);
-    }
+
 }

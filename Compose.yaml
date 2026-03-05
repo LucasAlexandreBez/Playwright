@@ -12,3 +12,9 @@ services:
     mem_limit: 4gb
     cpus: 3
     restart: unless-stopped
+    networks:
+      - qa-network
+
+networks:
+  qa-network:
+    external: true

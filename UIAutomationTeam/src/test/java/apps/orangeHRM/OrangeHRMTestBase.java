@@ -16,7 +16,6 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.HarMode;
 import com.microsoft.playwright.options.WaitUntilState;
 
-import apps.orangeHRM.page.LoginPage;
 import engine.PlaywrightThreadManager;
 import engine.TestBaseManager;
 import engine.devices.DesktopContext;
@@ -26,22 +25,19 @@ import engine.devices.DesktopContext;
  *
  * <p>
  * This class is responsible for configuring and initializing the Playwright
- * {@link com.microsoft.playwright.BrowserContext} and {@link com.microsoft.playwright.Page}
+ * {@link com.microsoft.playwright.BrowserContext} and
+ * {@link com.microsoft.playwright.Page}
  * used by DemoQA tests.
  * </p>
  *
  * @author Lucas Alexandre Bez Piancoski
  * @since 1.0.0
  */
-public class OrangeHRMTestBase extends TestBaseManager{
+public class OrangeHRMTestBase extends TestBaseManager {
 
-	protected BrowserContext context;
+    protected BrowserContext context;
     protected Page page;
-    
-    LoginPage loginPage = new LoginPage();
-    private String username = PropertiesConfigLoader.getPropertyValue("app.orangehrm.username");
-    private String password = PropertiesConfigLoader.getPropertyValue("app.orangehrm.pwd");
-   
+
     @BeforeEach
     public void setupTest() {
     	NewContextOptions options = DesktopContext.Desktop_1440x900();
@@ -52,7 +48,7 @@ public class OrangeHRMTestBase extends TestBaseManager{
         }
         if (GlobalTestRunConfig.HAR_CAPTURE) {
         	options
-        	.setRecordHarPath(Paths.get("target/har/demoqa-" + LocalDateTime.now().toString() + ".har"))
+        	.setRecordHarPath(Paths.get("target/har/orangehrm-" + LocalDateTime.now().toString() + ".har"))
         	.setRecordHarMode(HarMode.FULL);
         }
     	
@@ -63,7 +59,6 @@ public class OrangeHRMTestBase extends TestBaseManager{
         		PropertiesConfigLoader.getPropertyValue("app.orangehrm.url"),
         	    new Page.NavigateOptions()
         	        .setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
-        	);
-        loginPage.fillTheLoginFormAccessOrangeHRM(page, username, password);
+        );
     }
 }

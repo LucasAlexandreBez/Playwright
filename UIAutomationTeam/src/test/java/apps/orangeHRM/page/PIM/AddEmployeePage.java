@@ -19,7 +19,7 @@ public class AddEmployeePage {
 		fileChooser.setFiles(Paths.get(filePath));
 	}
 
-	@Step("Set the employee first name with value {firstname}")
+	@Step("Set the employee first name with value {firstName}")
 	public void setEmployeeFirstName(Page page, String firstName) {
 	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).click();
 	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill(firstName);
@@ -39,7 +39,7 @@ public class AddEmployeePage {
 	
 	@Step("Set the employee id with value {id}")
 	public void setEmployeeIdName(Page page, String id) {
-		page.getByLabel("Employee Id").fill(id);
+		page.locator(".oxd-input-group:has-text('Employee Id') input").fill(id);
 	}
 	
 	@Step("Switch on the Create Login Details")
@@ -60,17 +60,17 @@ public class AddEmployeePage {
 
 	@Step("Set the employee username with value {username}")
 	public void setEmployeeUsername(Page page, String username) {
-		page.getByLabel("Username").fill(username);
+		page.locator(".oxd-input-group:has-text('Username') input").fill(username);
 	}
 
 	@Step("Set the employee password")
 	public void setEmployeePassword(Page page, String password) {
-		page.getByLabel("Password").fill(password);
+		page.locator(".oxd-input-group:has(label:text-is('Password')) input").fill(password);
 	}
 
 	@Step("Re-type the employee password")
 	public void confirmEmployeePassword(Page page, String password) {
-		page.getByLabel("Confirm Password").fill(password);
+		page.locator(".oxd-input-group:has(label:text-is('Confirm Password')) input").fill(password);
 	}
 
 	@Step("Set the employee login status to enabled")
@@ -93,35 +93,9 @@ public class AddEmployeePage {
 		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Cancel")).click();
 	}
 
-	@Step("Verify Employee ID is automatically fullfilled by system")
-	public boolean verifySystemAlreadyFillTheEmpoyeeIDAutomatically(Page page){
-		return !page.getByLabel("Employee Id").getAttribute("value").isBlank();
-	}
-
-	@Step("Fill the new employee register form and submit successfully")
-	public void createNewEmployee(
-		Page page, 
-		boolean withEmployeeLoginDetails, 
-		boolean isEmployeeLoginEnabled,
-		String profileImagePath,
-		String firstName,
-		String middleName,
-		String lastName,
-		String username,
-		String password
-	){
-		setEmployeeProfileImage(page, profileImagePath);
-		setEmployeeFirstName(page, firstName);
-		setEmployeeMiddleName(page, middleName);
-		setEmployeeLastName(page, lastName);
-
-		swithcONCreateLoginDetails(page);
-		setEmployeeUsername(page, username);
-		setEmployeePassword(page, password);
-		confirmEmployeePassword(page, password);
-		if (!isEmployeeLoginEnabled) {setEmployeeLoginStatusToDisabled(page);} 
-		else { setEmployeeLoginStatusToEnabled(page);}
-		clickOnSaveButton(page);
+	@Step("Get the employee id value from employee register form")
+	public String getEmployeeId(Page page){
+		return page.locator(".oxd-input-group:has-text('Employee Id') input").inputValue();
 	}
 
 }

@@ -3,7 +3,7 @@ package helper;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import apps.orangeHRM.flows.models.Employee;
+import apps.orangeHRM.models.Employee;
 
 public class EmployeeFactory {
 

@@ -10,11 +10,12 @@ import org.junit.platform.suite.api.Suite;
 	ElementsPageRegressionTest.class
 })
 @IncludeTags({
-    "E2E",
-    "API"
+    "API",
+    "Regression"
 })
 @ExcludeTags({
-	"Regression"
+	"Flaky",
+    "UI"
 })
 public class DemoQARegressionTestSuite {
 

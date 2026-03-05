@@ -1,10 +1,10 @@
-package apps.orangeHRM.flows.PIM;
+package apps.orangeHRM.rules.PIM;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.microsoft.playwright.Page;
 
-import apps.orangeHRM.flows.models.Employee;
+import apps.orangeHRM.models.Employee;
 import apps.orangeHRM.page.PIM.AddEmployeePage;
 import io.qameta.allure.Step;
 
@@ -13,7 +13,7 @@ public class CreateNewEmployeeFlow {
     AddEmployeePage addEmployeePage = new AddEmployeePage();
     
     @Step("Create a new employee with login details and enabled status")
-    public void createNewEmployeeWithLoginDetailsEnabled(Page page, Employee employee) {
+    public void createNewEmployeeWithLoginDetails_StatusEnabled(Page page, Employee employee) {
         assertTrue(!addEmployeePage.getEmployeeId(page).isBlank());
         if (employee.getProfileImagePath() != null) {
             addEmployeePage.setEmployeeProfileImage(page, employee.getProfileImagePath());
@@ -35,7 +35,7 @@ public class CreateNewEmployeeFlow {
     }
 
     @Step("Create a new employee with login details and disabled status")
-    public void createNewEmployeeWithLoginDetailsDisabled(Page page, Employee employee) {
+    public void createNewEmployeeWithLoginDetails_StatusDisabled(Page page, Employee employee) {
         assertTrue(!addEmployeePage.getEmployeeId(page).isBlank());
         if (employee.getProfileImagePath() != null) {
             addEmployeePage.setEmployeeProfileImage(page, employee.getProfileImagePath());

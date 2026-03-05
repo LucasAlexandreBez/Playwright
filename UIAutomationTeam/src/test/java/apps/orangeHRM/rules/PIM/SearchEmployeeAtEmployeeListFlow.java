@@ -1,16 +1,16 @@
-package apps.orangeHRM.flows.PIM;
+package apps.orangeHRM.rules.PIM;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.microsoft.playwright.Page;
 
-import apps.orangeHRM.flows.models.Employee;
+import apps.orangeHRM.models.Employee;
 import apps.orangeHRM.page.PIM.EmployeeListPage;
 import io.qameta.allure.Step;
 
 public class SearchEmployeeAtEmployeeListFlow {
     EmployeeListPage employeeList = new EmployeeListPage();
-    @Step("Search employee at Employee List page")
+    @Step("Search employee at Employee List page with Employee ID and verify the employee is found in search results")
     public void searchEmployeeById(Page page, Employee employee) {
         employeeList.searchEmployeeById(page, employee.getEmployeeId());
         assertTrue(

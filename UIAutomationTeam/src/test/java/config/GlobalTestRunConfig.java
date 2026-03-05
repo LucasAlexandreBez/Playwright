@@ -7,8 +7,8 @@ package config;
  * @since 1.0.0
  */
 public class GlobalTestRunConfig {
-	public static final boolean HEADLESS = false;
-    public static final double SLOWMOTION = 600;
+	public static final boolean HEADLESS = true;
+    public static final double SLOWMOTION = 200;
     public static final double TIMEOUT = 60_000;
     public static final SupportedBrowserTypes SELECTED_BROWSER = SupportedBrowserTypes.EDGE;
     public static final boolean CHROMIUM_SANDBOX = false;

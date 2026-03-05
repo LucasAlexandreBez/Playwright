@@ -1,4 +1,4 @@
-package apps.orangeHRM.database.Model;
+package apps.orangeHRM.models.database;
 
 import java.sql.Date;
 

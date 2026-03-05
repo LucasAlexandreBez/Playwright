@@ -1,4 +1,4 @@
-package apps.orangeHRM.flows.models;
+package apps.orangeHRM.models;
 
 public class Employee {
     private String employeeId;

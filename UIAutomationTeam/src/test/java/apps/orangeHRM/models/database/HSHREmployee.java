@@ -1,8 +1,9 @@
-package apps.orangeHRM.database.Model;
+package apps.orangeHRM.models.database;
 
 import java.sql.Date;
 
 public class HSHREmployee {
+    private String emp_number;
     private String employee_id;
     private String emp_lastname;
     private String emp_middle_name;
@@ -53,7 +54,7 @@ public class HSHREmployee {
     public HSHREmployee() {
     }
 
-    public HSHREmployee(String employee_id, String emp_lastname, String emp_firstname, String emp_middle_name,
+    public HSHREmployee(String emp_number, String employee_id, String emp_lastname, String emp_firstname, String emp_middle_name,
             String emp_nick_name, Boolean emp_smoker, String ethnic_race_code, Date emp_birthday, Integer nation_code,
             Integer emp_gender, String emp_marital_status, String emp_ssn_num, String emp_sin_num, String emp_other_id,
             String emp_dri_lice_num, Date emp_dri_lice_exp_date, String emp_military_service, Integer emp_status,
@@ -63,6 +64,7 @@ public class HSHREmployee {
             String emp_oth_email, Integer termination_id, String custom1, String custom2, String custom3,
             String custom4, String custom5, String custom6, String custom7, String custom8, String custom9,
             String custom10, Date purged_at) {
+        this.emp_number = emp_number;
         this.employee_id = employee_id;
         this.emp_lastname = emp_lastname;
         this.emp_firstname = emp_firstname;
@@ -111,13 +113,21 @@ public class HSHREmployee {
         this.purged_at = purged_at;
     }
 
-    public HSHREmployee(String employee_id, String emp_lastname, String emp_middle_name, String emp_firstname) {
+    public HSHREmployee(String emp_number, String employee_id, String emp_lastname, String emp_middle_name, String emp_firstname) {
+        this.emp_number = emp_number;
         this.employee_id = employee_id;
         this.emp_lastname = emp_lastname;
         this.emp_middle_name = emp_middle_name;
         this.emp_firstname = emp_firstname;
     }
 
+    public String getEmp_number() {
+        return emp_number;
+    }
+
+    public void setEmp_number(String emp_number) {
+        this.emp_number = emp_number;
+    }
     public String getEmployee_id() {
         return employee_id;
     }
@@ -485,6 +495,5 @@ public class HSHREmployee {
     public void setPurged_at(Date purged_at) {
         this.purged_at = purged_at;
     }
-
     
 }

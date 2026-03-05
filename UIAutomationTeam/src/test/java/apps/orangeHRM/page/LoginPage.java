@@ -27,4 +27,13 @@ public class LoginPage {
     	page.getByText("Forgot your password?").click();
     }
 
+    @Step("Get 'Account disabled' message value")
+    public String getAccountDisabledMessage(Page page) {
+        return page.locator(".oxd-alert-content:has(p:has-text('Account disabled'))").innerText();
+    }
+
+    @Step("Is 'Account disabled' warning visible on page")
+    public boolean isAccountDisabledWarningVisible(Page page) {
+        return page.locator(".oxd-alert-content:has(p:has-text('Account disabled'))").isVisible();
+    }
 }

@@ -65,7 +65,7 @@ public class TestBaseManager {
 			}
 		}
 		if (context != null) context.close();
-		if (GlobalTestRunConfig.HAR_CAPTURE) {
+		if (GlobalTestRunConfig.HAR_CAPTURE_ON_FAILURE) {
 			harPathResult = Path.of("target/hars/" + testName + ".har");
 		}
 	}

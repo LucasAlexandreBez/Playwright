@@ -78,6 +78,7 @@ public class DBQueryExecutorHelper {
             if (params != null) {
                 for (int i = 0; i < params.length; i++) statement.setObject(i + 1, params[i]);
             }
+            System.out.println(statement.toString());
             try (ResultSet result = statement.executeQuery()) {
                 if (result.next()) return mapper.apply(result);
                 return null;

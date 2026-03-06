@@ -1,4 +1,4 @@
-package apps.orangeHRM.rules.PIM;
+package apps.orangeHRM.flows.PIM;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,4 +1,4 @@
-package apps.orangeHRM.rules.PIM;
+package apps.orangeHRM.flows.PIM;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -32,6 +32,7 @@ public class CreateNewEmployeeFlow {
         addEmployeePage.setEmployeeLoginStatusToEnabled(page);
 
 		addEmployeePage.clickOnSaveButton(page);
+        assertTrue(addEmployeePage.checkIfSuccessMessageisTriggered(page));
     }
 
     @Step("Create a new employee with login details and disabled status")
@@ -45,12 +46,15 @@ public class CreateNewEmployeeFlow {
             addEmployeePage.setEmployeeMiddleName(page, employee.getMiddleName());
         }
         addEmployeePage.setEmployeeLastName(page, employee.getLastName());
+        addEmployeePage.setEmployeeIdName(page, employee.getEmployeeId());
+        
         addEmployeePage.swithcONCreateLoginDetails(page);
         addEmployeePage.setEmployeeUsername(page, employee.getUsername());
 		addEmployeePage.setEmployeePassword(page, employee.getPassword());
 		addEmployeePage.confirmEmployeePassword(page, employee.getPassword());
         addEmployeePage.setEmployeeLoginStatusToDisabled(page);
 		addEmployeePage.clickOnSaveButton(page);
+        assertTrue(addEmployeePage.checkIfSuccessMessageisTriggered(page));
     }
 
     @Step("Create a new employee without login details")
@@ -66,5 +70,6 @@ public class CreateNewEmployeeFlow {
         addEmployeePage.setEmployeeLastName(page, employee.getLastName());
         addEmployeePage.switchOFFCreateLoginDetails(page);
 		addEmployeePage.clickOnSaveButton(page);
+        assertTrue(addEmployeePage.checkIfSuccessMessageisTriggered(page));
     }
 }

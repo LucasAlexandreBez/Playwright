@@ -1,4 +1,4 @@
-package apps.orangeHRM.rules.Database;
+package apps.orangeHRM.flows.Database;
 
 import java.sql.SQLException;
 

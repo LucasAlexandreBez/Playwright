@@ -1,4 +1,4 @@
-package apps.orangeHRM.rules;
+package apps.orangeHRM.flows;
 
 import com.microsoft.playwright.Page;
 
@@ -13,7 +13,6 @@ public class LoginUserFlow {
 
     @Step("Fill the Login form and access OrangeHRM Dashboard")
     public void loginUserSuccessfully(Page page, String username, String password) {
-        System.out.println("Attempting to login with enabled user: " + username + " and password: " + password);
         loginPage.fillUsernameInput(page, username);
         loginPage.fillPasswordInput(page, password);
         loginPage.clickLoginInput(page);
@@ -21,7 +20,6 @@ public class LoginUserFlow {
 
     @Step("Verify if 'Account Disabled' warning is displayed when trying to login with a disabled user")
     public void verifyIfSystemPresentWarningMessagForDisabledUser(Page page, String username, String password) {
-        System.out.println("Attempting to login with disabled user: " + username + " and password: " + password);
         loginPage.fillUsernameInput(page, username);
         loginPage.fillPasswordInput(page, password);
         loginPage.clickLoginInput(page);

@@ -99,11 +99,10 @@ public class AddEmployeePage {
 	}
 
 	@Step("Check if the success message is triggered")
-	public void checkSuccessMessage(Page page, String expectedMessage) {
-		String actualMessage = page.locator(".oxd-toast-content").innerText();
-		if (!actualMessage.contains(expectedMessage)) {
-			throw new AssertionError("Expected message to contain: " + expectedMessage + " but was: " + actualMessage);
-		}
+	public boolean checkIfSuccessMessageisTriggered(Page page) {
+		Locator modal = page.getByText("Successfully Saved");
+		modal.waitFor();
+		return modal.isVisible();
 	}
 
 }

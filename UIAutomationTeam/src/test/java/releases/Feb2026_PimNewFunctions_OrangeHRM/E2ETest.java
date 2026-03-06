@@ -1,5 +1,6 @@
 package releases.Feb2026_PimNewFunctions_OrangeHRM;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -9,17 +10,17 @@ import org.junit.jupiter.api.*;
 import com.microsoft.playwright.TimeoutError;
 
 import apps.orangeHRM.OrangeHRMTestBase;
+import apps.orangeHRM.flows.LoginUserFlow;
+import apps.orangeHRM.flows.Database.GetEmployeeDetailsDB;
+import apps.orangeHRM.flows.Database.GetEmployeeLoginDetailsDB;
+import apps.orangeHRM.flows.PIM.CreateNewEmployeeFlow;
+import apps.orangeHRM.flows.PIM.SearchEmployeeAtEmployeeListFlow;
 import apps.orangeHRM.models.Employee;
 import apps.orangeHRM.models.database.HSHREmployee;
 import apps.orangeHRM.page.LoggedUserOptions;
 import apps.orangeHRM.page.MenuNavigation;
 import apps.orangeHRM.page.PIM.EmployeeListPage;
 import apps.orangeHRM.page.PIM.PimNavigation;
-import apps.orangeHRM.rules.LoginUserFlow;
-import apps.orangeHRM.rules.Database.GetEmployeeDetailsDB;
-import apps.orangeHRM.rules.Database.GetEmployeeLoginDetailsDB;
-import apps.orangeHRM.rules.PIM.CreateNewEmployeeFlow;
-import apps.orangeHRM.rules.PIM.SearchEmployeeAtEmployeeListFlow;
 import config.PropertiesConfigLoader;
 import helper.EmployeeFactory;
 import io.qameta.allure.*;
@@ -44,8 +45,8 @@ public class E2ETest extends OrangeHRMTestBase {
     String password = PropertiesConfigLoader.getPropertyValue("app.orangehrm.pwd");
 
     @BeforeEach
-    public void setupTest() {
-        super.setupTest();
+    public void setupTest(TestInfo testInfo) {
+        super.setupTest(testInfo);
         loginUserFlow.loginUserSuccessfully(page, username, password);
     }
 
@@ -90,30 +91,13 @@ public class E2ETest extends OrangeHRMTestBase {
 
         // DB
         HSHREmployee employeeQueryResult = HSHREmployeeTable.getEmployeeDataByEmployeeId(employee.getEmployeeId());
-        System.out.println("Employee data retrieved from database: " + employeeQueryResult);
-        assertEquals(
-            employee.getEmployeeId(),
-            employeeQueryResult.getEmployee_id(), 
-        "Employee Id in database should match the one provided during employee creation"
+        assertAll("Verify employee data in DB",
+            () -> assertEquals(employee.getEmployeeId(), employeeQueryResult.getEmployee_id()),
+            () -> assertEquals(employee.getFirstName(), employeeQueryResult.getEmp_firstname()),
+            () -> assertEquals(employee.getMiddleName(), employeeQueryResult.getEmp_middle_name()),
+            () -> assertEquals(employee.getLastName(), employeeQueryResult.getEmp_lastname())
         );
-        assertEquals(
-            employee.getFirstName(),
-            employeeQueryResult.getEmp_firstname(), 
-        "Employee first name in database should match the one provided during employee creation"
-        );
-        assertEquals(
-            employee.getMiddleName(),
-            employeeQueryResult.getEmp_middle_name(), 
-        "Employee middle name in database should match the one provided during employee creation"
-        );
-        assertEquals(
-            employee.getLastName(),
-            employeeQueryResult.getEmp_lastname(), 
-        "Employee last name in database should match the one provided during employee creation"
-        );
-
         String usernameResult = ohrmUserTable.getusernameByEmpNumber(employeeQueryResult.getEmp_number());
-        System.out.println("Username in database: " + usernameResult);
         assertEquals(
             employee.getUsername(),
             usernameResult, 
@@ -151,30 +135,14 @@ public class E2ETest extends OrangeHRMTestBase {
     
         //DB
         HSHREmployee employeeQueryResult = HSHREmployeeTable.getEmployeeDataByEmployeeId(employee.getEmployeeId());
-        System.out.println("Employee query result: " + employeeQueryResult);
-        assertEquals(
-            employee.getEmployeeId(),
-            employeeQueryResult.getEmployee_id(), 
-        "Employee Id in database should match the one provided during employee creation"
-        );
-        assertEquals(
-            employee.getFirstName(),
-            employeeQueryResult.getEmp_firstname(), 
-        "Employee first name in database should match the one provided during employee creation"
-        );
-        assertEquals(
-            employee.getMiddleName(),
-            employeeQueryResult.getEmp_middle_name(), 
-        "Employee middle name in database should match the one provided during employee creation"
-        );
-        assertEquals(
-            employee.getLastName(),
-            employeeQueryResult.getEmp_lastname(), 
-        "Employee last name in database should match the one provided during employee creation"
+        assertAll("Verify employee data in DB",
+            () -> assertEquals(employee.getEmployeeId(), employeeQueryResult.getEmployee_id()),
+            () -> assertEquals(employee.getFirstName(), employeeQueryResult.getEmp_firstname()),
+            () -> assertEquals(employee.getMiddleName(), employeeQueryResult.getEmp_middle_name()),
+            () -> assertEquals(employee.getLastName(), employeeQueryResult.getEmp_lastname())
         );
 
         boolean isDisabled = ohrmUserTable.isLoginUserDisabled(employeeQueryResult.getEmp_number());
-        System.out.println("Username in database: " + isDisabled);
         assertTrue(
             isDisabled, 
         "Employee username in database should match the one provided during employee creation"

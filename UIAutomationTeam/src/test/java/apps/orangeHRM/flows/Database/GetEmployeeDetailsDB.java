@@ -1,4 +1,4 @@
-package apps.orangeHRM.rules.Database;
+package apps.orangeHRM.flows.Database;
 
 import java.sql.SQLException;
 
@@ -11,15 +11,7 @@ public class GetEmployeeDetailsDB {
     
     @Step("Get employee_id,emp_lastname,emp_firstname,emp_middle_name Details By employee_id from database")
     public HSHREmployee getEmployeeDataByEmployeeId(String empNumber) {
-        String query = """
-            SELECT 
-                emp_number,
-                employee_id, 
-                emp_lastname,
-                emp_firstname,
-                emp_middle_name
-            FROM orangehrm.hs_hr_employee WHERE employee_id = ?;
-        """;
+        String query = "SELECT emp_number,employee_id,emp_lastname,emp_firstname,emp_middle_name FROM orangehrm.hs_hr_employee WHERE employee_id = ?";
         return DBQueryExecutorHelper.executeQuery(
             OrangeHRMDBInfo.getOrangeHRMDBConnInfo(), 
             query,

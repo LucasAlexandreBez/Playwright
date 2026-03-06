@@ -4,10 +4,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.Optional;
 import java.util.function.Supplier;
 
-import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
 
@@ -24,56 +22,50 @@ import io.qameta.allure.Allure;
  */
 public class TestStatusWatcher implements TestWatcher{
 
-    private Supplier<Path> videoOfTetResult;
-    private Supplier<byte[]> screenshotOfTestResult;
+    private Supplier<Path> videoResult;
+    private Supplier<Path> harResult;
+    private Supplier<byte[]> screenshotResult;
     private Path updatedvideoPath;
 
     public TestStatusWatcher(
-            Supplier<Path> videoOfTetResult,
-            Supplier<byte[]> screenshotOfTestResult
+            Supplier<Path> videoResult,
+            Supplier<Path> harResult,
+            Supplier<byte[]> screenshotResult
     ) {
-        this.videoOfTetResult = videoOfTetResult;
-        this.screenshotOfTestResult = screenshotOfTestResult;
+        this.videoResult = videoResult;
+        this.harResult = harResult;
+        this.screenshotResult = screenshotResult;
     }
-
-	@Override
-	public void testDisabled(ExtensionContext context, Optional<String> reason) {
-		TestWatcher.super.testDisabled(context, reason);
-	}
-
-	@Override
-	public void testAborted(ExtensionContext context, @Nullable Throwable cause) {
-		TestWatcher.super.testAborted(context, cause);
-	}
 	
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        if (videoOfTetResult.get() != null) {
-        	updatedvideoPath = renameVideo(context, "FAILED", videoOfTetResult.get());
+        if (videoResult.get() != null) {
+        	updatedvideoPath = renameVideo(context, "FAILED", videoResult.get());
         	AllureAttachmentHelper.addVideoAttachment(context, updatedvideoPath);
         }
-        if (screenshotOfTestResult.get() != null) {
-        	AllureAttachmentHelper.addImageAttachment(screenshotOfTestResult.get(), SupportedImageTypes.JPEG);
+        if (harResult.get() != null) {
+        	AllureAttachmentHelper.addFileAttachment("Network HAR","application/json",".har", harResult.get());
+        }
+        if (screenshotResult.get() != null) {
+        	AllureAttachmentHelper.addImageAttachment(screenshotResult.get(), SupportedImageTypes.JPEG);
         }
         AllureAttachmentHelper.addTextAttachment("Failure Log", buildFailureLog(context, cause));
     }
 
     @Override
     public void testSuccessful(ExtensionContext context) {
-        if (videoOfTetResult.get() != null) {
-        	updatedvideoPath = renameVideo(context, "PASSED", videoOfTetResult.get());
+        if (videoResult.get() != null) {
+        	updatedvideoPath = renameVideo(context, "SUCCESS", videoResult.get());
         	AllureAttachmentHelper.addVideoAttachment(context, updatedvideoPath);
         }
-        if (screenshotOfTestResult.get() != null) {
-        	AllureAttachmentHelper.addImageAttachment(screenshotOfTestResult.get(), SupportedImageTypes.JPEG);
+        if (screenshotResult.get() != null) {
+        	AllureAttachmentHelper.addImageAttachment(screenshotResult.get(), SupportedImageTypes.JPEG);
         }
     }
     
     private Path renameVideo(ExtensionContext context, String status, Path videoPath) {
         try {
-            Path target = Paths.get(
-            		"target/videos",
-            		context.getDisplayName() + "_" + status + "_" + System.currentTimeMillis() + ".webm"
+            Path target = Paths.get("target/videos", context.getDisplayName() + "_" + status + "_" + System.currentTimeMillis() + ".webm"
             );
             Files.createDirectories(target.getParent());
             Files.move(videoPath, target, StandardCopyOption.REPLACE_EXISTING);

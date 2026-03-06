@@ -15,5 +15,5 @@ public class GlobalTestRunConfig {
     
     public static final boolean VIDEO_CAPTURE = true;
     public static final boolean SCREENSHOT_CAPTURE = true;
-    public static final boolean HAR_CAPTURE = false;
+    public static final boolean HAR_CAPTURE_ON_FAILURE = true;
 }

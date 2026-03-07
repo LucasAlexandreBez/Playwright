@@ -26,7 +26,7 @@ The goal of this project is to provide a reliable and structured automation fram
 
 Lucas Alexandre - QA SDET Engineer
 
-🔗 [My Linkedin](https://onlinemarkdown.com)
+🔗 [My Linkedin]([https://onlinemarkdown.com](https://www.linkedin.com/in/lucasalexandrebezpiancoski/))
 
 ---
 

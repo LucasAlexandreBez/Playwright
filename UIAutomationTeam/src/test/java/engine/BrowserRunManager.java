@@ -1,8 +1,11 @@
-package config;
+package engine;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
+
+import config.GlobalTestRunConfig;
+import helper.PropertiesConfigLoader;
 
 import com.microsoft.playwright.Playwright;
 
@@ -12,9 +15,9 @@ import com.microsoft.playwright.Playwright;
  * @author Lucas Alexandre Bez Piancoski
  * @since 1.0.0
  */
-public class BrowserRunConfig {
+public class BrowserRunManager {
 
-    private BrowserRunConfig() {}
+    private BrowserRunManager() {}
 
     /**
      * Creates a {@link Browser} for the current execution mode.

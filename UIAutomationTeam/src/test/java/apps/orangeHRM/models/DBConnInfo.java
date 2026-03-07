@@ -1,4 +1,4 @@
-package helper.Database;
+package apps.orangeHRM.models;
 
 import engine.DatabaseType;
 

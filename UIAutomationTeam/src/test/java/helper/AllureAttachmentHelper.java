@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 
@@ -29,12 +28,12 @@ public class AllureAttachmentHelper {
 	public static void addVideoAttachment(ExtensionContext context, Path videoPath) {
         if (videoPath == null || !Files.exists(videoPath)) return;
 		try (InputStream is = Files.newInputStream(videoPath)) {
-			Allure.addAttachment(context.getDisplayName() + "_" + LocalDateTime.now(), "video/webm", is, ".webm");
+			Allure.addAttachment(context.getDisplayName(), "video/webm", is, ".webm");
 		} catch (Exception e) {
 			System.err.println("Error attaching video: " + e.getMessage());
 		}
 	}
-
+    
 	public static void addImageAttachment(byte[] image, SupportedImageTypes imageType) {
         if (image == null || image.length == 0) return;
 		Allure.addAttachment(
@@ -43,7 +42,7 @@ public class AllureAttachmentHelper {
 				new ByteArrayInputStream(image),
 				imageType.getExtension());
 	}
-	
+
     public static void addTextAttachment(String name, String content) {
         if (content == null || content.isBlank()) return;
         Allure.addAttachment(

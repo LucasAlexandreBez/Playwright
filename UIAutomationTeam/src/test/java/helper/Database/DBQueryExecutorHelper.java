@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.function.Function;
 
+import apps.orangeHRM.models.DBConnInfo;
 import engine.HikariDBManager;
 
 /**

@@ -21,8 +21,8 @@ import apps.orangeHRM.page.LoggedUserOptions;
 import apps.orangeHRM.page.MenuNavigation;
 import apps.orangeHRM.page.PIM.EmployeeListPage;
 import apps.orangeHRM.page.PIM.PimNavigation;
-import config.PropertiesConfigLoader;
 import helper.EmployeeFactory;
+import helper.PropertiesConfigLoader;
 import io.qameta.allure.*;
 
 @Epic("PIM functions - 2026")

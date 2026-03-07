@@ -1,8 +1,8 @@
 package apps.orangeHRM;
 
-import config.PropertiesConfigLoader;
+import apps.orangeHRM.models.DBConnInfo;
 import engine.DatabaseType;
-import helper.Database.DBConnInfo;
+import helper.PropertiesConfigLoader;
 
 /**
  * This class is responsible for providing the database connection information for the OrangeHRM application.

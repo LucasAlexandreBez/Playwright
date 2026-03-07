@@ -9,7 +9,6 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Browser.NewContextOptions;
 
 import config.GlobalTestRunConfig;
-import config.PropertiesConfigLoader;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.HarContentPolicy;
@@ -19,6 +18,7 @@ import com.microsoft.playwright.options.WaitUntilState;
 import engine.PlaywrightThreadManager;
 import engine.TestBaseManager;
 import engine.devices.DesktopContext;
+import helper.PropertiesConfigLoader;
 
 /**
  * Base test class for OrangeHRM application tests.

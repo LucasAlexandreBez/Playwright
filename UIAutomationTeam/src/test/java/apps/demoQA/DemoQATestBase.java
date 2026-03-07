@@ -12,10 +12,10 @@ import com.microsoft.playwright.options.HarMode;
 import com.microsoft.playwright.options.WaitUntilState;
 
 import config.GlobalTestRunConfig;
-import config.PropertiesConfigLoader;
 import engine.PlaywrightThreadManager;
 import engine.TestBaseManager;
 import engine.devices.DesktopContext;
+import helper.PropertiesConfigLoader;
 
 /**
  * Base test class for DemoQA application tests.

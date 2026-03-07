@@ -20,10 +20,10 @@ import com.zaxxer.hikari.HikariDataSource;
  * @since 1.0.0
  */
 public class HikariDBManager {
-
 	private static ConcurrentHashMap<String, HikariDataSource> poolOfDBConnections = new ConcurrentHashMap<>();
-
-	private static HikariDataSource createDatasourceForDatabaseConnection(DatabaseType databaseType, String server, String port, String database, String username, String password) {
+	private static HikariDataSource createDatasourceForDatabaseConnection(DatabaseType databaseType, String server, String port, String database, 
+		String username, String password
+	) {
 		HikariConfig config = new HikariConfig();
 		switch (databaseType) {
 		case MYSQL:
@@ -51,8 +51,6 @@ public class HikariDBManager {
 		config.setMaxLifetime(1800000);
 		return new HikariDataSource(config);
 	}
-
-	
 	/**
 	 * Retrieves an active {@link Connection} from a pooled {@link ConcurrentHashMap} containing multiples {@link HikariDataSource}.
 	 * <p>
@@ -72,7 +70,8 @@ public class HikariDBManager {
 	 */
 	public static Connection ConnectToDatabase(DatabaseType databaseType, String server, String port, String database, String username, String password) throws SQLException {
 		String key = databaseType + "_" + server + "_" + port + "_" + database;
-		HikariDataSource ds = poolOfDBConnections.computeIfAbsent(key, k -> createDatasourceForDatabaseConnection(databaseType, server, port, database, username, password));
+		HikariDataSource ds = poolOfDBConnections.computeIfAbsent(key, 
+			k -> createDatasourceForDatabaseConnection(databaseType, server, port, database, username, password));
 		return ds.getConnection();
 	}
 }

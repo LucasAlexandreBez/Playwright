@@ -26,7 +26,6 @@ public class TestBaseManager {
 
 	public BrowserContext context;
 	public Page page;
-
 	private Path videoPathResult;
 	private Path harPathResult;
 	private byte[] screenshotResult;
@@ -49,27 +48,21 @@ public class TestBaseManager {
 		String testName = testInfo.getDisplayName().replaceAll("[^a-zA-Z0-9-_]", "_");
 		if (page != null) {
 			Video video = page.video();
-			if (GlobalTestRunConfig.SCREENSHOT_CAPTURE) {
-				screenshotResult = page.screenshot();
-			}
+			if (GlobalTestRunConfig.SCREENSHOT_CAPTURE) screenshotResult = page.screenshot();
 			page.close();
 			if (video != null) {
-				
 				Path videoPath = Path.of("target/videos/" + testName + ".webm");
-				try {
-					videoPathResult = video.path();
-				} catch (PlaywrightException e) {
+				try { videoPathResult = video.path();} 
+				catch (PlaywrightException e) {
 					video.saveAs(videoPath);
 					videoPathResult = videoPath;
 				}
 			}
 		}
 		if (context != null) context.close();
-		if (GlobalTestRunConfig.HAR_CAPTURE_ON_FAILURE) {
-			harPathResult = Path.of("target/hars/" + testName + ".har");
-		}
+		if (GlobalTestRunConfig.HAR_CAPTURE_ON_FAILURE) harPathResult = Path.of("target/hars/" + testName + ".har");
 	}
-
+	
 	@AfterAll
 	public static void cleanPlaywrightThreads() {
 		PlaywrightThreadManager.cleanPlaywrightAndBrowserThreadInstances();

@@ -3,8 +3,6 @@ package engine;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Playwright;
 
-import config.BrowserRunConfig;
-
 /**
  * Provides thread-local management of {@link Playwright} and {@link Browser} instances.
  *
@@ -25,7 +23,9 @@ import config.BrowserRunConfig;
 public class PlaywrightThreadManager {
 
     private static final ThreadLocal<Playwright> PLAYWRIGHT_THREAD = ThreadLocal.withInitial(Playwright::create);
-    private static final ThreadLocal<Browser> BROWSER_THREAD =  ThreadLocal.withInitial(() -> BrowserRunConfig.getBrowserConfiguration(PLAYWRIGHT_THREAD.get()));
+    private static final ThreadLocal<Browser> BROWSER_THREAD =  ThreadLocal.withInitial(
+        () -> BrowserRunManager.getBrowserConfiguration(PLAYWRIGHT_THREAD.get())
+    );
 
     private PlaywrightThreadManager() {}
 

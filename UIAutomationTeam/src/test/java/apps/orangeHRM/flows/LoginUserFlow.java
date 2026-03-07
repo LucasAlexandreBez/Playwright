@@ -23,7 +23,10 @@ public class LoginUserFlow {
         loginPage.fillUsernameInput(page, username);
         loginPage.fillPasswordInput(page, password);
         loginPage.clickLoginInput(page);
-        assertEquals("Account disabled",loginPage.getAccountDisabledMessage(page), "Expected 'Account disabled' message to be displayed, but it was not.");
+        assertEquals(
+            "Account disabled",loginPage.getAccountDisabledMessage(page), 
+            "Expected 'Account disabled' message to be displayed, but it was not."
+        );
         assertTrue(loginPage.isAccountDisabledWarningVisible(page), "Expected 'Account disabled' message to be visible, but it was not.");
     }
 }

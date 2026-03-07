@@ -1,4 +1,4 @@
-package config;
+package helper;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,7 +35,7 @@ public class PropertiesConfigLoader {
 	private static synchronized void loadPropertyFile() {
 		String env = System.getProperty("env");
 		if (env == null || env.isBlank()) {
-			throw new IllegalStateException("No environment profile defined. Run with: mvn test -P<profile>");
+			throw new IllegalStateException("No environment profile defined. Run with: mvn test -P <profile>");
 		}
 		String fileName = "application-" + env + ".properties";
 		

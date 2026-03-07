@@ -85,7 +85,7 @@ The project structure was designed to be easy to navigate and to help maintain a
 
 <div align="center">
 
-![Structure](docImages/Structure_1.png)
+![Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/Structure_1.png)
 
 > Project structure overview
 
@@ -109,11 +109,11 @@ For every release, I create a new package and a dedicated **TestSuite**. This al
 
 <div align="center">
 
-![Releases Structure](docImages/ReleasesStruture.png)
+![Releases Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/ReleasesStruture.png)
 
 > Release structure overview
 
-![Test Suite Example](docImages/TestSuiteExample.png)
+![Test Suite Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/TestSuiteExample.png)
 
 > Test suite example
 
@@ -128,7 +128,7 @@ All helper methods are implemented as **static functions** to simplify usage and
 
 <div align="center">
 
-![Helpers Structure](docImages/HelpersStruture.png)
+![Helpers Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/HelpersStruture.png)
 
 > Helper structure overview
 
@@ -140,7 +140,7 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Employee Factory](docImages/EmployeeFactory.png)
+![Employee Factory](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/EmployeeFactory.png)
 
 > Employee factory class
 
@@ -150,11 +150,11 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Allure Attachment](docImages/AllureAttachmentHelper.png)
+![Allure Attachment](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/AllureAttachmentHelper.png)
 
 > Allure attachment helper class
 
-![Supported Image Types](docImages/SupportedImageTypeEnum.png)
+![Supported Image Types](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/SupportedImageTypeEnum.png)
 
 > Supported image types enum
 
@@ -179,7 +179,7 @@ String empNumber = DBQueryExecutorHelper.executeQuery(
 
 <div align="center">
 
-![SQL Query executor](docImages/DBQueryExecutorHelper.png)
+![SQL Query executor](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/DBQueryExecutorHelper.png)
 
 > Database query executor helper class
 
@@ -218,7 +218,7 @@ String empNumber = DBQueryExecutorHelper.executeQuery(
 
 <div align="center">
 
-![Property's config loader](docImages/PropertiesConfigLoader.png)
+![Property's config loader](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/PropertiesConfigLoader.png)
 
 > Database query executor helper class
 
@@ -234,7 +234,7 @@ The `engine` folder contains the core components responsible for managing the ex
 
 <div align="center">
 
-![Engine Structure](docImages/EngineStructure.png)
+![Engine Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/EngineStructure.png)
 
 > Engine structure overview
 
@@ -268,7 +268,7 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Playwright Thread Manager](docImages/PlaywrightThreadManager.png)
+![Playwright Thread Manager](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/PlaywrightThreadManager.png)
 
 > Playwright thread manager overview
 
@@ -297,7 +297,7 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Hikary Database Manager](docImages/HikariDBManager.png)
+![Hikary Database Manager](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/HikariDBManager.png)
 
 > Hikari Database manager overview
 
@@ -317,7 +317,7 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Test Base Manager](docImages/TestBaseManager.png)
+![Test Base Manager](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/TestBaseManager.png)
 
 > Test Base manager overview
 
@@ -356,11 +356,11 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Test Status Watcher](docImages/TestStatusWatcher.png)
+![Test Status Watcher](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/TestStatusWatcher.png)
 
 > Test Status watcher overview
 
-![Success & Failure functions](docImages/TestStatusWatcherSuccessFailed.png)
+![Success & Failure functions](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/TestStatusWatcherSuccessFailed.png)
 
 > Test Status Success/Failure overview
 
@@ -383,11 +383,11 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Devices Structure](docImages/DevicesFolderStructure.png)
+![Devices Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/DevicesFolderStructure.png)
 
 > Device's folder Structure overview
 
-![Device](docImages/LGOptimusL70ContextDeviceExample.png)
+![Device](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/LGOptimusL70ContextDeviceExample.png)
 
 > Device function overview
 
@@ -402,15 +402,15 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Browser Run Manager Structure](docImages/BrowserRunManager.png)
+![Browser Run Manager Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/BrowserRunManager.png)
 
 > Browser Run Manager overview
 
-![Local Browser Config](docImages/LocalBrowserConfig.png)
+![Local Browser Config](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/LocalBrowserConfig.png)
 
 > Local browser configuration overview
 
-![Cloud Browser Config](docImages/CloudBrowserConfig.png)
+![Cloud Browser Config](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/CloudBrowserConfig.png)
 
 > Cloud browser configuration overview
 
@@ -425,7 +425,7 @@ These classes define the **runtime behavior of test executions**, including brow
 
 <div align="center">
 
-![Configuration Structure](docImages/ConfigStructure.png)
+![Configuration Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/ConfigStructure.png)
 
 > Configuration structure overview
 
@@ -451,7 +451,7 @@ Inside this folder we currently have:
 
 <div align="center">
 
-![Global Test Run Configuration](docImages/GlobalTestRunConfig.png)
+![Global Test Run Configuration](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/GlobalTestRunConfig.png)
 
 > Global Test Run Configuration overview
 
@@ -465,7 +465,7 @@ The `apps` folder contains the test structure and pre-configuration classes used
 
 <div align="center">
 
-![Configuration Structure](docImages/AppStructure.png)
+![Configuration Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/AppStructure.png)
 
 > Configuration structure overview
 
@@ -477,7 +477,7 @@ For each app we divide in different folders, and for each app folder we have:
 
 <div align="center">
 
-![Configuration Structure](docImages/OrangeHRMTestBaseExample.png)
+![Configuration Structure](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/OrangeHRMTestBaseExample.png)
 
 > Test base configuration example
 
@@ -496,11 +496,11 @@ These values are used to create a `DBConnInfo` object, which is later consumed b
 
 <div align="center">
 
-![Orange HRMDB Info class](docImages/OrangeHRMDBInfo.png)
+![Orange HRMDB Info class](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/OrangeHRMDBInfo.png)
 
 > OrangeHRMDBInfo class overview
 
-![Usage Example](docImages/CreateNewEmployeeDB.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/CreateNewEmployeeDB.png)
 
 > Usage Example on a Flow class
 
@@ -510,7 +510,7 @@ These values are used to create a `DBConnInfo` object, which is later consumed b
 
 <div align="center">
 
-![Usage Example](docImages/LoginUserFlow.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/LoginUserFlow.png)
 
 > Usage Example on a Flow class
 
@@ -520,7 +520,7 @@ These values are used to create a `DBConnInfo` object, which is later consumed b
 
 <div align="center">
 
-![Usage Example](docImages/OHRMUser.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/OHRMUser.png)
 
 > Model class overview
 
@@ -530,7 +530,7 @@ These values are used to create a `DBConnInfo` object, which is later consumed b
 
 <div align="center">
 
-![Usage Example](docImages/LoginPage.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/LoginPage.png)
 
 > Login class overview
 
@@ -554,7 +554,7 @@ This will open a local Allure report with test results and artifacts.
 
 <div align="center">
 
-![Usage Example](docImages/AllureReportExample.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/tree/main/https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/AllureReportExample.png)
 
 > Allure report example
 

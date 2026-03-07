@@ -18,8 +18,7 @@ An End-to-End automation testing framework built with **Playwright + Java + JUni
 
 The goal of this project is to provide a reliable and structured automation framework that simplifies debugging test failures by automatically collecting test artifacts such as videos, screenshots, and network logs.
 
-⚠️ **This framework was designed with thread safety in mind!**
-`<br>`
+⚠️ **This framework was designed with thread safety in mind!**<br>
 ⚠️ **The entire project structure and core classes were implemented to support safe parallel test execution!**
 
 ### 👨‍💻 Author

@@ -553,7 +553,7 @@ This will open a local Allure report with test results and artifacts.
 
 <div align="center">
 
-![Usage Example](https://github.com/LucasAlexandreBez/Playwright/tree/main/DocImages/AllureReportExample.png)
+![Usage Example](https://github.com/LucasAlexandreBez/Playwright/blob/main/DocImages/AllureReportExample.png)
 
 > Allure report example
 

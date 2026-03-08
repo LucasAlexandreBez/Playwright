@@ -42,7 +42,7 @@ Lucas Alexandre - QA SDET Engineer
    - [App&#39;s Folder](#-apps-folder)
 5. [Running the Tests](#️-running-the-tests)
 6. [Generating the Allure Report](#-generating-the-allure-report)
-7. [](#)
+7. [Running with Playwright Server using Docker](#-running-with-playwright-server-using-docker)
 
 ---
 
@@ -561,7 +561,7 @@ This will open a local Allure report with test results and artifacts.
 
 ---
 
-# 🐳 Running with Playwright Server (Docker)
+# 🐳 Running with Playwright Server using Docker
 
 This framework supports execution with **Playwright Server running inside Docker**.
 
